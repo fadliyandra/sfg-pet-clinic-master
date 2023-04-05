@@ -9,6 +9,7 @@ package guru.springframework.sfgpetclinic.model;
 //import java.util.HashSet;
 //import java.util.Set;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,13 +21,21 @@ import java.util.Set;
 //@NoArgsConstructor
 //@Entity
 //@Table(name = "owners")
+
+@Entity
+@Table(name = "owners")
 public class Owner extends Person {
 
-
-
+    @Column(name ="address")
     private String address;
+
+    @Column(name = "city")
     private String city;
-    private String telehone;
+
+    @Column(name = "telephone")
+    private String telephone;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
     public String getAddress() {
@@ -45,12 +54,12 @@ public class Owner extends Person {
         this.city = city;
     }
 
-    public String getTelehone() {
-        return telehone;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setTelehone(String telehone) {
-        this.telehone = telehone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public Set<Pet> getPets() {
