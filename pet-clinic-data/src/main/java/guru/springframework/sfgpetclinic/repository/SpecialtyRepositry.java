@@ -1,7 +1,7 @@
 package guru.springframework.sfgpetclinic.repository;
 
 import guru.springframework.sfgpetclinic.model.Speciality;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SpecialtyRepositry extends CrudRepository<Speciality, Long> {
+public interface SpecialtyRepositry extends JpaRepository<Speciality, Long> {
 }

@@ -23,7 +23,7 @@ import java.util.Set;
 //@Table(name = "owners")
 
 @Entity
-@Table(name = "owners")
+@Table(name ="owners")
 public class Owner extends Person {
 
     @Column(name ="address")
