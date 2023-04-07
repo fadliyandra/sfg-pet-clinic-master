@@ -1,8 +1,8 @@
 package guru.springframework.sfgpetclinic.repository;
 
 import guru.springframework.sfgpetclinic.model.Vet;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface VisitRepositroy extends JpaRepository<Vet, Long> {
+public interface VisitRepositroy extends CrudRepository<Vet, Long> {
 
 }

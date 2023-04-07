@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Table(name = "specialties")
 public class Speciality extends BaseEntity{
 
-    @Column(name = "descriotion")
+    @Column(name ="descriotion")
     private String description;
 
     public String getDescription() {
